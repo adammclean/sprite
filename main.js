@@ -3,15 +3,20 @@ $(document).ready(function(){
 })
 
 function select_sprite(){
-    var sprite = document.getElementById("imagesprite");
-    var num = math.random();
-    if(num <= .33){
-      var sprite = $('#imagespriteA');
+    // var sprite = document.getElementById("#imagesprite");
+
+    function rand(){
+       var num = math.random();
+       console.log(num);
+       return num;
+    };
+    if (num <= .33){
+      $("#imagesprite").css("height",$("#imagespriteA").css);
     }
-    elseif(num > .33 && num < .66){
-      var sprite = $('#imagespriteB');
+    else if (num > .33 && num < .66){
+      $("#imagesprite").css("height",$("#imagespriteB").css);
     }
-    else(){
-      var sprite = $('#imagespriteC');
+    else {
+      $("#imagesprite").css("height",$("#imagespriteC").css)  ;
     }
 };
