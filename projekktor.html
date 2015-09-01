@@ -1,28 +1,46 @@
 <!DOCTYPE html>
 <head>
+<style media="screen">
 
+  #container{
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    border: 1px solid black;
+  }
+
+  #video_player{
+    width: 640px;
+    margin: 0 auto;
+    text-align: center;
+    height: 360px;
+  }
+
+</style>
 </head>
 <body>
-  <div id="player_a">
-    <video class="projekktor" width="640" height="360" poster="poster.jpg">
-      <source src="source.mp4" />
-      <source src="source.webm" />
-      <source src="source.ogv" />
-      <source src="source.mkv" />
-      <source src="source.flv" />
-    </video>
+  <div id="container">
+    <div id="video_player">
+      <video class="projekktor" width="640" height="360" poster="poster.jpg" autoplay>
+        <source src="FFmpeg_video/source.mp4" />
+        <source src="FFmpeg_video/source.webm" />
+        <source src="FFmpeg_video/source.ogv" />
+        <source src="FFmpeg_video/source.mkv" />
+        <source src="FFmpeg_video/source.flv" />
+      </video>
+    </div>
   </div>
 
 <script type="text/javascript">
 
-  projekktor('#player_a', {
+  projekktor('video_player', {
       controls: true,
       autoplay: true,
       volume: 0.5,
       playlist: [
          {
-            0:{src:'myvideo.mp4', type: 'video/mp4'},
-            1:{src:'myvideo.ogv', type: 'video/ogv'}
+            0:{src:'FFmpeg_video/source.mp4', type: 'video/mp4'},
+            1:{src:'FFmpeg_video/source.ogv', type: 'video/ogv'}
          }
       ]
   });

@@ -1,46 +1,34 @@
-#imagesprite{
-  background: url(imagesprite.png) no-repeat 0 0;
+#imagesprite, #imagespriteA, #imagespriteB, #imagespriteC {
+  background: url(imagesprite.png) no-repeat;
   display: block;
   height: 110px;
   width: 600px;
 }
 
-#imagesprite:hover{
+#imagesprite {
+  background-position: 0px 0px;
+}
+
+#imagesprite:hover {
   background-position: 0 -240px;
 }
 
-#imagespriteA{
-  background: url(imagesprite.png) no-repeat 0 0;
-  display: block;
-  height: 110px;
-  width: 600px;
-  /*display: none;*/
+#imagespriteA {
+  background-position: 0px -120px;
 }
 
-#imagespriteB{
-  background: url(imagesprite.png) no-repeat 0 0;
-  display: block;
-  height: -120px;
-  width: 600px;
-  /*display: none;*/
+#imagespriteB {
+  background-position: 0px -240px;
 }
 
-#imagespriteC{
-  background: url(imagesprite.png) no-repeat 0 0;
-  display: block;
-  height: -240px;
-  width: 600px;
-  /*display: none;*/
-}
 
 /* Beacon Pixel */
 
-.pixeltracker{
+.pixeltracker {
   background: url(pixel.png);
   background-repeat: repeat;
   width: 100%;
 }
-
 
 
 /* HTML5 Resets*/
